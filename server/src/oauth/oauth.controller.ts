@@ -8,7 +8,7 @@ export class OauthController {
 	constructor(private oauthService: OauthService) {}
 
 	@Post('/naver')
-	loginNaver(@Body() oauthNaverDto: OauthNaverDto, @Req() request: Request) {
+	  loginNaver(@Body() oauthNaverDto: OauthNaverDto, @Req() request: Request) {
 		console.log('oauth/naver');
 		return this.oauthService.loginNaver(oauthNaverDto, request);
 	}
