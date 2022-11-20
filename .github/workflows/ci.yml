@@ -22,9 +22,13 @@ jobs:
         working-directory: client
         run: |
           npm ci
-          npm run format-check
-          npm run lint
           npm run build
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
+          prettier: true
 
   server-ci:
     if: contains(github.event.pull_request.labels.*.name,'💻 BE')
@@ -43,6 +47,10 @@ jobs:
         working-directory: server
         run: |
           npm ci
-          npm run format-check
-          npm run lint
           npm run build
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
+          prettier: true
