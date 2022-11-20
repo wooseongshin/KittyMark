@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, RouteMatch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 // page
 import LoginPage from './pages/LoginPage/LoginPage';
@@ -12,7 +12,7 @@ const App = () => {
 		<ThemeProvider
 			theme={{
 				palette: {
-					main: '#ffe99c',
+					  main: '#ffe99c',
 					back: `#ffffff`,
 					border: '#ffc700',
 					inner: `#fffbed`,
