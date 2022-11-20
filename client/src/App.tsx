@@ -12,7 +12,7 @@ const App = () => {
 		<ThemeProvider
 			theme={{
 				palette: {
-					  main: '#ffe99c',
+		main: '#ffe99c',
 					back: `#ffffff`,
 					border: '#ffc700',
 					inner: `#fffbed`,
