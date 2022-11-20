@@ -9,7 +9,7 @@ export class OauthController {
 
 	@Post('/naver')
 	loginNaver(@Body() oauthNaverDto: OauthNaverDto, @Req() request: Request) {
-			console.log('oauth/naver');
+		console.log('oauth/naver');
 		return this.oauthService.loginNaver(oauthNaverDto, request);
 	}
 }
