@@ -25,6 +25,7 @@ jobs:
         npm run build
       
   server-ci:
+  if: contains(github.event.pull_request.labels.*.name,${{'💻 BE'}})
     name: server-ci
     runs-on: ubuntu-latest
     steps:
