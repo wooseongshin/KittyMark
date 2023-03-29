@@ -23,6 +23,7 @@ jobs:
         FRONTEND_SECRET: ${{ secrets.REACT_APP_SECRETS }}
       run: |
         echo "$FRONTEND_SECRET" > .env
+        cat .env
         npm ci
         npm run build 
         
